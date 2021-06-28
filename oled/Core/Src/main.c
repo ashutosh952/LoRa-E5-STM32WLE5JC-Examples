@@ -117,25 +117,8 @@ int main(void)
 
 	char print[] = "A";
 
-	while(1){
-	//		HAL_Delay(100);
-			SSD1306_GotoXY (0,0);
-
-			SSD1306_GotoXY (10,10); // goto 10, 10
-			SSD1306_Puts ("starting", &Font_11x18, 1); // print Hello
-			SSD1306_GotoXY (10, 30);
-			SSD1306_UpdateScreen();
-			SSD1306_Puts ("...", &Font_11x18, 1);
-			SSD1306_UpdateScreen(); // update screen
-
-			HAL_Delay(100);
-			SSD1306_Clear();
-			break;
-		}
-
 	while (1)
 	{
-//		continue;
 
 		if(HAL_GPIO_ReadPin(button_GPIO_Port, button_Pin) == GPIO_PIN_RESET){
 			SSD1306_Clear();  // scroll entire screen
@@ -148,13 +131,6 @@ int main(void)
 			HAL_Delay(1000);
 
 		}
-
-		else{
-			SSD1306_Stopscroll();
-//			HAL_Delay(200);
-		}
-
-
 
     /* USER CODE END WHILE */
 
