@@ -1,0 +1,3 @@
+stm32wlxx_hal_msp.c:64:6:HAL_MspInit	0	static
+stm32wlxx_hal_msp.c:83:6:HAL_I2C_MspInit	120	static
+stm32wlxx_hal_msp.c:136:6:HAL_I2C_MspDeInit	8	static
